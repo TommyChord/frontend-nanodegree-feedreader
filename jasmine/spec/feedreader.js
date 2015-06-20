@@ -100,8 +100,9 @@ $(function() {
 		var oldContent = '';
 		var newContent = '';
 
-		// Initial load with ID=0 (Udacity Blog) and store content.
-		// When completed, load again with ID=2 (HTML5 Rocks)
+		/* Initial load with ID=0 (Udacity Blog) and store content.
+		 * When completed, load again with ID=2 (HTML5 Rocks)
+		 */
 		beforeEach(function(done) {
 			loadFeed(0, function() {
 				oldContent = $(".feed").html();
