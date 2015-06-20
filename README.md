@@ -2,6 +2,7 @@
 
 In this project you are given a web-based application that reads RSS feeds. The original developer of this application clearly saw the value in testing, they've already included [Jasmine](http://jasmine.github.io/) and even started writing their first test suite! Unfortunately, they decided to move on to start their own company and we're now left with an application with an incomplete test suite. That's where you come in.
 
+### The students comments are added to the bottom.
 
 ## Why this Project?
 
@@ -37,3 +38,14 @@ You will learn how to use Jasmine to write a number of tests against a pre-exist
 12. Write a test that ensures when the loadFeed function is called and completes its work, there is at least a single .entry element within the .feed container. Remember, loadFeed() is asynchronous so this test wil require the use of Jasmine's beforeEach and asynchronous done() function.
 13. Write a test that ensures when a new feed is loaded by the loadFeed function that the content actually changes. Remember, loadFeed() is asynchronous.
 14. When complete - all of your tests should pass.
+
+# Tommys Comment
+There are comments in the code that describes the tests I have implemented, but in short there are 7 tests:
+
+1. The RSS Feeds - are defined: This test expects that the array is defined and is not empty
+2. The RSS Feeds - have urls defined: This test loops through the allFeeds array and verifies that the url is defined and not empty. If one of them is not defined or is empty, the test will fail.
+3. The RSS Feeds - have names defined: This test loops through the allFeeds array and verifies that the name is defined and not empty. If one of them is not defined or is empty, the test will fail.
+4. The menu - is hidden by default: This test checks if the body has the "menu-hidden" class before any interaction.
+5. The menu - is toggled by click: Trigger the click event on the "menu-icon-link" first to show the menu, then again to hide the menu.
+6. Initial Entries - are present: This test uses "beforeEach" and done() to wait for the asynchronous function to be completed before the actual test is run. The test checks if there are DOM elements with class "entry" in the parent "feed" element.
+7. New Feed Selection - content changes: This test first loads the Udacity blog and stoers the content in a variable. Then it loads again with HTML5 Rocks and stores the content in another variable. The actual test compares the two variables and the test passes if they are different.
